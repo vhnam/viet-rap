@@ -1,0 +1,83 @@
+.list__title {
+  font-size: 1.5rem;
+  padding-bottom: .5rem;
+  border-bottom: 0.5rem solid #3B5D5F;
+  color: #3B5D5F;
+}
+
+.list__title--light {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+.list__content {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.list__more {
+  padding-bottom: 4rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.list__more-link {
+  color: #212121;
+}
+
+.top-songs .item {
+  padding-bottom: .125rem;
+  border-bottom: .125rem solid #e0e0e0;
+}
+
+.top-songs .item__index {
+  display: block;
+  padding: .5rem;
+  margin: .5rem;
+  border: 1px solid #212121;
+  text-align: center;
+}
+
+.top-songs .item__title {
+  display: block;
+  margin-top: .5rem;
+  color: #212121;
+}
+
+.top-songs .item__artist {
+  color: #757575;
+}
+
+.top-songs .item__views {
+  display: block;
+  padding-right: .5rem;
+  margin-top: .5rem;
+  text-align: right;
+}
+
+.top-artists {
+  background-color: #7F4646;
+}
+
+.top-artists .list__title {
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.top-artists .list__more-link {
+  color: #fff;
+}
+
+.top-artists .item__image {
+  width: 100%;
+}
+
+.top-artists .item__artist {
+  display: block;
+  margin-top: .5rem;
+  color: #fff;
+  font-size: 1.25rem;
+  text-align: center;
+}
+

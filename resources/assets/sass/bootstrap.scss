@@ -1,0 +1,28 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.navbar {
+    background-color: $primary-color;
+
+    .nav-link {
+        &--active {
+            font-weight: 700;
+            color: $black !important;
+        }
+    }
+}
+
+.footer {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    background-color: $black;
+    text-align: center;
+    color: #fff;
+}
