@@ -10,7 +10,8 @@
         "flynsarmy/csv-seeder": "1.*",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
-        "libreworks/ext-mongodb-hhi": "^1.2"
+        "libreworks/ext-mongodb-hhi": "^1.2",
+        "folklore/graphql": "~1.0.0"
     },
     "require-dev": {
         "filp/whoops": "^2.0",
