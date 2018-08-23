@@ -4,6 +4,9 @@ namespace App\Domains\Album;
 
 use Illuminate\Database\Eloquent\Model;
 
+use App\Domains\Artist\Artist;
+use App\Domains\Song\Song;
+
 class Album extends Model
 {
     /**
@@ -25,8 +28,16 @@ class Album extends Model
 	 *
 	 * @return Illuminate\Database\Eloquent\Relations\BelongsTo
 	 */
-	public function artists()
-	{
+	public function artists() {
 		return $this->belongsTo(Artist::class);
+    }
+    
+    /**
+	 * One to Many relation
+	 *
+	 * @return Illuminate\Database\Eloquent\Relations\BelongsTo
+	 */
+	public function songs() {
+		return $this->belongsTo(Song::class);
 	}
 }

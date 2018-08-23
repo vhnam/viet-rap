@@ -2,14 +2,14 @@
 
 namespace App\Domains\Song\GraphQL;
 
+use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Type as GraphQLType;
 
 class SongType extends GraphQLType
 {
     protected $attributes = [
-        'name' => 'Song',
-        'description' => 'A song'
+        'name' => 'Song'
     ];
 
     public function fields() {
@@ -25,6 +25,9 @@ class SongType extends GraphQLType
             ],
             'lyrics' => [
                 'type' => Type::string()
+            ],
+            'artists' => [
+                'type' => Type::listOf(GraphQL::type('Artist')),
             ],
             'created_at' => [
                 'type' => Type::string()

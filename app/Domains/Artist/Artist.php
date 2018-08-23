@@ -4,6 +4,9 @@ namespace App\Domains\Artist;
 
 use Illuminate\Database\Eloquent\Model;
 
+use App\Domains\Album\Album;
+use App\Domains\Song\Song;
+
 class Artist extends Model
 {
     /**
@@ -25,8 +28,16 @@ class Artist extends Model
      *
      * @return Illuminate\Database\Eloquent\Relations\hasMany
      */
-    public function albums()
-    {
-      return $this->hasMany(Album::class, 'id', 'artist');
+    public function albums() {
+        return $this->hasMany(Album::class);
+    }
+
+    /**
+     * One to Many relation
+     *
+     * @return Illuminate\Database\Eloquent\Relations\hasMany
+     */
+    public function songs() {
+        return $this->belongsToMany(Song::class);
     }
 }

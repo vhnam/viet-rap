@@ -13,14 +13,14 @@ class CreateArtistsAndSongsTable extends Migration
      */
     public function up()
     {
-        Schema::create('artists_and_songs', function (Blueprint $table) {
+        Schema::create('artist_song', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('song')->unsigned()->index();
-            $table->integer('artist')->unsigned()->index();
+            $table->integer('song_id')->unsigned()->index();
+            $table->integer('artist_id')->unsigned()->index();
             $table->timestamps();
 
-            $table->foreign('song')->references('id')->on('songs')->onDelete('cascade');
-            $table->foreign('artist')->references('id')->on('artists')->onDelete('cascade');
+            // $table->foreign('song')->references('id')->on('songs')->onDelete('cascade');
+            // $table->foreign('artist')->references('id')->on('artists')->onDelete('cascade');
         });
     }
 
@@ -31,6 +31,6 @@ class CreateArtistsAndSongsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('artists_and_songs');
+        Schema::dropIfExists('artist_and_song');
     }
 }

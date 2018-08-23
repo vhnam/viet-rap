@@ -6,6 +6,7 @@ use GraphQL;
 use App\Domains\Artist\Artist;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Query;
+use GraphQL\Type\Definition\ResolveInfo;
 
 class ArtistQuery extends Query
 {
@@ -24,7 +25,7 @@ class ArtistQuery extends Query
         ];
     }
 
-    public function resolve($root, $args) {
+    public function resolve($root, $args, $context, ResolveInfo $info) {
         $artists = new Artist();
 
         if (isset($args['id'])) {
@@ -33,6 +34,10 @@ class ArtistQuery extends Query
 
         if (isset($args['name'])) {
             $artists = $artists->where('name', 'like', "%{$args['name']}%");
+        }
+
+        if (isset($args['albums'])) {
+            $artists = $artists->where('id', $args['id']);
         }
 
         return $artists->get();

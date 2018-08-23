@@ -2,6 +2,7 @@
 
 namespace App\Domains\Artist\GraphQL;
 
+use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Type as GraphQLType;
 
@@ -25,6 +26,12 @@ class ArtistType extends GraphQLType
             ],
             'alias' => [
                 'type' => Type::nonNull(Type::string())
+            ],
+            'songs' => [
+                'type' => Type::listOf(GraphQL::type('Song')),
+            ],
+            'albums' => [
+                'type' => Type::listOf(GraphQL::type('Album')),
             ],
             'coverImage' => [
                 'type' => Type::string()

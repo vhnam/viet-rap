@@ -2,16 +2,16 @@
 
 use Flynsarmy\CsvSeeder\CsvSeeder;
 
-class AlbumsAndSongsTableSeeder extends CsvSeeder
+class ArtistAndSongTableSeeder extends CsvSeeder
 {
     /**
      * Config the database seed
      */
     public function __construct()
 	{
-        $this->table = 'albums_and_songs';
+        $this->table = 'artist_song';
         $this->csv_delimiter = '|';
-        $this->filename = base_path() . '/database/seeds/csvs/albums_and_songs.csv';
+        $this->filename = base_path() . '/database/seeds/csvs/artists_and_songs.csv';
     }
 
     /**

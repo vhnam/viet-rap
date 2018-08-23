@@ -6,6 +6,7 @@ use GraphQL;
 use App\Domains\Song\Song;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Query;
+use GraphQL\Type\Definition\ResolveInfo;
 
 class SongQuery extends Query
 {
@@ -24,17 +25,29 @@ class SongQuery extends Query
         ];
     }
 
-    public function resolve($root, $args) {
-        $artists = new Song();
+    public function resolve($root, $args, $context, ResolveInfo $info) {
+        // $songs = Song::query();
 
-        if (isset($args['id'])) {
-            $artists = $artists->where('id', $args['id']);
+        // if (isset($args['id'])) {
+        //     $songs = $songs->where('id', $args['id']);
+        // }
+
+        // if (isset($args['name'])) {
+        //     $songs = $songs->where('name', 'like', "%{$args['name']}%");
+        // }
+
+        // return $songs->get();
+
+        $fields = $info->getFieldSelection();
+
+        $songs = Song::query();
+
+        foreach ($fields as $field => $keys) {
+            if ($field === 'artists') {
+                $songs->with('artists');
+            }
         }
 
-        if (isset($args['name'])) {
-            $artists = $artists->where('name', 'like', "%{$args['name']}%");
-        }
-
-        return $artists->get();
+        return $songs->latest()->get();
     }
 }

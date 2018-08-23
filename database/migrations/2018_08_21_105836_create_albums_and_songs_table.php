@@ -13,14 +13,14 @@ class CreateAlbumsAndSongsTable extends Migration
      */
     public function up()
     {
-        Schema::create('albums_and_songs', function (Blueprint $table) {
+        Schema::create('album_song', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('song')->unsigned()->index();
-            $table->integer('album')->unsigned()->index();
+            $table->integer('song_id')->unsigned()->index();
+            $table->integer('album_id')->unsigned()->index();
             $table->timestamps();
 
-            $table->foreign('song')->references('id')->on('songs')->onDelete('cascade');
-            $table->foreign('album')->references('id')->on('albums')->onDelete('cascade');
+            // $table->foreign('song')->references('id')->on('songs')->onDelete('cascade');
+            // $table->foreign('album')->references('id')->on('albums')->onDelete('cascade');
         });
     }
 
@@ -31,6 +31,6 @@ class CreateAlbumsAndSongsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('albums_and_songs');
+        Schema::dropIfExists('album_and_song');
     }
 }
