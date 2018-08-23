@@ -124,7 +124,7 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-
+                'artists' => \App\Domains\Artist\GraphQL\ArtistQuery::class,
             ],
             'mutation' => [
 
@@ -181,7 +181,7 @@ return [
      * ]
      */
     'types' => [
-
+        'Artist' => App\Domains\Artist\GraphQL\ArtistType::class,
     ],
 
     /*
