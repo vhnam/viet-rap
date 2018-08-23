@@ -11,6 +11,8 @@ use App\Domains\Artist\Repository\ArtistRepository;
 
 class ArtistRepositoryTest extends TestCase
 {
+    use RefreshDatabase;
+
     /**
      * Setup
      * 
@@ -35,7 +37,7 @@ class ArtistRepositoryTest extends TestCase
     }
 
     /**
-     * Create a new model
+     * Create a new artist
      * 
      * @return void
      */
@@ -55,5 +57,57 @@ class ArtistRepositoryTest extends TestCase
         $this->assertEquals($data['alias'], $artist->alias);
         $this->assertEquals($data['coverImage'], $artist->coverImage);
         $this->assertEquals($data['artistImage'], $artist->artistImage);
+    }
+
+    /**
+     * Find an artist by ID
+     * 
+     * @return void
+     */
+    public function testFindArtistById() {
+        $data = [
+            'name' => 'Nah',
+            'profile' => 'Tên thật là Nguyễn Vũ Sơn',
+            'alias' => 'nah',
+            'coverImage' => 'https://example.com/artists/nah-cover.jpg',
+            'artistImage' => 'https://example.com/artists/nah.jpg',
+        ];
+
+        $artist = $this->createArtist($data);
+        $artistRepository = new ArtistRepository(new Artist);
+        $foundedArtist = $artistRepository->findArtistById($artist->id);
+
+        $this->assertInstanceOf(Artist::class, $foundedArtist);
+        $this->assertEquals($artist->name, $foundedArtist->name);
+        $this->assertEquals($artist->profile, $foundedArtist->profile);
+        $this->assertEquals($artist->alias, $foundedArtist->alias);
+        $this->assertEquals($artist->coverImage, $foundedArtist->coverImage);
+        $this->assertEquals($artist->artistImage, $foundedArtist->artistImage);
+    }
+
+    /**
+     * Update profile of artist
+     * 
+     * @return void
+     */
+    public function testUpdateArtist() {
+        $data = [
+            'name' => 'Nah',
+            'profile' => 'Tên thật là Nguyễn Vũ Sơn',
+            'alias' => 'nah',
+            'coverImage' => 'https://example.com/artists/nah-cover.jpg',
+            'artistImage' => 'https://example.com/artists/nah.jpg',
+        ];
+
+        $artist = $this->createArtist($data);
+
+        $data['profile'] = 'Tên thật là Nguyễn Vũ Sơn (aka Deadnah, Nah Chó Điên, Nah Đầu Bếp), sinh ngày 28/12/1991';
+
+        $artistRepository = new ArtistRepository(new Artist);
+        $updated = $artistRepository->updateArtist($data);
+        $foundedArtist = $artistRepository->findArtistById($artist->id);
+
+        $this->assertEquals(true, $updated);
+        $this->assertEquals($data['profile'], $foundedArtist->profile);
     }
 }

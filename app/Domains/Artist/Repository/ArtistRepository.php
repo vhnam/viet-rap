@@ -16,16 +16,32 @@ class ArtistRepository extends BaseRepository implements ArtistRepositoryInterfa
         parent::__construct($artist);
     }
 
+    /**
+     * Create an new artist
+     * 
+     * @param array $data
+     * @return Artist
+     */
     public function createArtist(array $data): Artist {
         return $this->create($data);
     }
 
+    /**
+     * Find an artist by ID
+     * 
+     * @param integer $id
+     * @return Artist
+     */
     public function findArtistById(int $id): Artist {
-        return $this->model;
+        return $this->findOneOrFail($id);
     }
 
     public function updateArtist(array $data): bool {
-        return true;
+        // try {
+        //     return $this->update($data);
+        // } catch (QueryException $exception) {
+        //     throw new UpdateArtistErrorException($exception);
+        // }
     }
 
     public function deleteArtist(int $id): bool {

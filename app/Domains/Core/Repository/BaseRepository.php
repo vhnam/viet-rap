@@ -11,7 +11,7 @@ class BaseRepository implements BaseRepositoryInterface
     /**
      * BaseRepository Constructor
      * 
-     * @param Model $model
+     * @param Illuminate\Database\Eloquent\Model $model
      */
     public function __construct(Model $model) {
         $this->model = $model;
@@ -25,10 +25,12 @@ class BaseRepository implements BaseRepositoryInterface
         return $this->model->create($attributes);
     }
 
+    /**
+     * @param array $attributes
+     * @return boolean
+     */
     public function update(array $attributes): bool {
-        // TODO
-        
-        return true;
+        return $this->model->update($attributes);
     }
 
     public function all($columns = array('*'), string $orderBy = 'id', string $sortBy = 'asc') {
@@ -40,7 +42,7 @@ class BaseRepository implements BaseRepositoryInterface
     }
 
     public function findOneOrFail($id) {
-        // TODO
+        return $this->model->findOrFail($id);
     }
 
     public function findBy(array $data) {
@@ -48,10 +50,6 @@ class BaseRepository implements BaseRepositoryInterface
     }
 
     public function findOneBy(array $data) {
-        // TODO
-    }
-
-    public function findOneByOrFail(array $data) {
         // TODO
     }
 

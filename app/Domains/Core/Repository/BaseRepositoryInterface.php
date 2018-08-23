@@ -18,7 +18,5 @@ interface BaseRepositoryInterface
 
     public function findOneBy(array $data);
 
-    public function findOneByOrFail(array $data);
-
     public function delete(): bool;
 }
