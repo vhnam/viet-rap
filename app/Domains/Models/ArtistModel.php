@@ -4,7 +4,7 @@ namespace App\Domains\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Artist extends Model
+class ArtistModel extends Model
 {
     /**
      * The table associated with the model.
@@ -12,6 +12,13 @@ class Artist extends Model
      * @var string
      */
     protected $table = 'artists';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['name', 'profile', 'alias', 'coverImage', 'artistImage'];
 
     /**
      * One to Many relation
