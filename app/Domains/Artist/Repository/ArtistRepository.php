@@ -2,7 +2,7 @@
 
 namespace App\Domains\Artist\Repository;
 
-use App\Domains\Models\ArtistModel;
+use App\Domains\Artist\Artist;
 use App\Domains\Core\Repository\BaseRepository;
 
 class ArtistRepository extends BaseRepository implements ArtistRepositoryInterface
@@ -10,17 +10,17 @@ class ArtistRepository extends BaseRepository implements ArtistRepositoryInterfa
     /**
      * ArtistRepository constructor.
      *
-     * @param ArtistModel $artist
+     * @param Artist $artist
      */
-    public function __construct(ArtistModel $artist) {
+    public function __construct(Artist $artist) {
         parent::__construct($artist);
     }
 
-    public function createArtist(array $data): ArtistModel {
+    public function createArtist(array $data): Artist {
         return $this->create($data);
     }
 
-    public function findArtistById(int $id): ArtistModel {
+    public function findArtistById(int $id): Artist {
         return $this->model;
     }
 
@@ -32,7 +32,7 @@ class ArtistRepository extends BaseRepository implements ArtistRepositoryInterfa
         return true;
     }
 
-    public function saveArtist(ArtistModel $artist) {
+    public function saveArtist(Artist $artist) {
         // TODO
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domains\Album\Repository;
+namespace App\Domains\Artist\Repository;
 
 use Illuminate\Support\Collection;
 
