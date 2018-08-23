@@ -4,7 +4,7 @@ namespace App\Domains\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ArtistModel extends Model
+class Artist extends Model
 {
     /**
      * The table associated with the model.

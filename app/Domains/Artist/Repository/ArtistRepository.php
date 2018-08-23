@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Domains\Repositories;
+namespace App\Domains\Artist\Repository;
 
 use App\Domains\Models\ArtistModel;
-use App\Domains\Repositories\Interfaces\ArtistRepositoryInterface;
+use App\Domains\Core\Repository\BaseRepository;
 
 class ArtistRepository extends BaseRepository implements ArtistRepositoryInterface
 {

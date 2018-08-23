@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Domains\GraphQL\Type;
+namespace App\Domains\Album\GraphQL;
 
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Type as GraphQLType;
 
-class ArtistsType extends GraphQLType
+class AlbumsType extends GraphQLType
 {
 
 }

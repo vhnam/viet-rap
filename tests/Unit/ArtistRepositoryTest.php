@@ -6,8 +6,8 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-use App\Domains\Models\ArtistModel;
-use App\Domains\Repositories\ArtistRepository;
+use App\Domains\Artist\Artist;
+use App\Domains\Artist\Repository\ArtistRepository;
 
 class ArtistRepositoryTest extends TestCase
 {
@@ -15,10 +15,10 @@ class ArtistRepositoryTest extends TestCase
      * Setup
      * 
      * @param array $data
-     * @return ArtistModel
+     * @return Artist
      */
     private function createArtist($data) {
-        $artistRepository = new ArtistRepository(new ArtistModel);
+        $artistRepository = new ArtistRepository(new Artist);
         return $artistRepository->createArtist($data);
     }
 
@@ -28,7 +28,7 @@ class ArtistRepositoryTest extends TestCase
      * @return void
      */
     public function testItIsInstanceOfArtistRepository() {
-        $model = new ArtistModel;
+        $model = new Artist;
         $repository = new ArtistRepository($model);
 
         $this->assertInstanceOf(ArtistRepository::class, $repository);
@@ -49,7 +49,7 @@ class ArtistRepositoryTest extends TestCase
         ];
 
         $artist = $this->createArtist($data);
-        $this->assertInstanceOf(ArtistModel::class, $artist);
+        $this->assertInstanceOf(Artist::class, $artist);
         $this->assertEquals($data['name'], $artist->name);
         $this->assertEquals($data['profile'], $artist->profile);
         $this->assertEquals($data['alias'], $artist->alias);

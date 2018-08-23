@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Domains\GraphQL\Query;
+namespace App\Domains\Album\GraphQL;
 
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Folklore\GraphQL\Support\Query;
 
-class SongsQuery extends Query
+class AlbumsQuery extends Query
 {
 
 }

@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Domains\Repositories;
+namespace App\Domains\Core\Repository;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Domains\Repositories\Interfaces\BaseRepositoryInterface;
 
 class BaseRepository implements BaseRepositoryInterface
 {
