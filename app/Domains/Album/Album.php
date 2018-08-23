@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domains\Models;
+namespace App\Domains\Album;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,7 +11,14 @@ class Album extends Model
      *
      * @var string
      */
-    protected $table = 'albums';
+	protected $table = 'albums';
+	
+	/**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['name', 'coverImage', 'artist'];
 
     /**
 	 * One to Many relation

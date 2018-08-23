@@ -124,7 +124,9 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
+                'albums' => \App\Domains\Album\GraphQL\AlbumQuery::class,
                 'artists' => \App\Domains\Artist\GraphQL\ArtistQuery::class,
+                'songs' => \App\Domains\Song\GraphQL\SongQuery::class,
             ],
             'mutation' => [
 
@@ -181,7 +183,9 @@ return [
      * ]
      */
     'types' => [
+        'Album' => App\Domains\Album\GraphQL\AlbumType::class,
         'Artist' => App\Domains\Artist\GraphQL\ArtistType::class,
+        'Song' => App\Domains\Song\GraphQL\SongType::class,
     ],
 
     /*

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domains\Models;
+namespace App\Domains\Song;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -12,4 +12,11 @@ class Song extends Model
      * @var string
      */
     protected $table = 'songs';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['name', 'views', 'lyrics'];
 }
