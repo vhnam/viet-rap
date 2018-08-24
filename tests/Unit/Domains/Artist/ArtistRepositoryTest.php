@@ -1,18 +1,14 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests\Unit\Domains\Artist;
 
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 use App\Domains\Artist\Artist;
 use App\Domains\Artist\Repository\ArtistRepository;
 
 class ArtistRepositoryTest extends TestCase
 {
-    use RefreshDatabase;
-
     /**
      * Setup
      * 
@@ -85,29 +81,29 @@ class ArtistRepositoryTest extends TestCase
         $this->assertEquals($artist->artistImage, $foundedArtist->artistImage);
     }
 
-    /**
-     * Update profile of artist
-     * 
-     * @return void
-     */
-    public function testUpdateArtist() {
-        $data = [
-            'name' => 'Nah',
-            'profile' => 'Tên thật là Nguyễn Vũ Sơn',
-            'alias' => 'nah',
-            'coverImage' => 'https://example.com/artists/nah-cover.jpg',
-            'artistImage' => 'https://example.com/artists/nah.jpg',
-        ];
+    // /**
+    //  * Update profile of artist
+    //  * 
+    //  * @return void
+    //  */
+    // public function testUpdateArtist() {
+    //     $data = [
+    //         'name' => 'Nah',
+    //         'profile' => 'Tên thật là Nguyễn Vũ Sơn',
+    //         'alias' => 'nah',
+    //         'coverImage' => 'https://example.com/artists/nah-cover.jpg',
+    //         'artistImage' => 'https://example.com/artists/nah.jpg',
+    //     ];
 
-        $artist = $this->createArtist($data);
+    //     $artist = $this->createArtist($data);
 
-        $data['profile'] = 'Tên thật là Nguyễn Vũ Sơn (aka Deadnah, Nah Chó Điên, Nah Đầu Bếp), sinh ngày 28/12/1991';
+    //     $data['profile'] = 'Tên thật là Nguyễn Vũ Sơn (aka Deadnah, Nah Chó Điên, Nah Đầu Bếp), sinh ngày 28/12/1991';
 
-        $artistRepository = new ArtistRepository(new Artist);
-        $updated = $artistRepository->updateArtist($data);
-        $foundedArtist = $artistRepository->findArtistById($artist->id);
+    //     $artistRepository = new ArtistRepository(new Artist);
+    //     $updated = $artistRepository->updateArtist($data);
+    //     $foundedArtist = $artistRepository->findArtistById($artist->id);
 
-        $this->assertEquals(true, $updated);
-        $this->assertEquals($data['profile'], $foundedArtist->profile);
-    }
+    //     $this->assertEquals(true, $updated);
+    //     $this->assertEquals($data['profile'], $foundedArtist->profile);
+    // }
 }
