@@ -20,26 +20,25 @@ class AlbumQuery extends Query
     public function args() {
         return [
             'id' => ['name' => 'id', 'type' => Type::int()],
-            'name' => ['name' => 'name', 'type' => Type::string()],
-            'artist' => ['name' => 'id', 'type' => Type::int()],
+            'name' => ['name' => 'name', 'type' => Type::string()]
         ];
     }
 
     public function resolve($root, $args) {
-        $artists = new Album();
+        $albums = new Album();
 
         if (isset($args['id'])) {
-            $artists = $artists->where('id', $args['id']);
+            $albums = $albums->where('id', $args['id']);
         }
 
         if (isset($args['name'])) {
-            $artists = $artists->where('name', 'like', "%{$args['name']}%");
+            $albums = $albums->where('name', 'like', "%{$args['name']}%");
         }
 
         if (isset($args['artist'])) {
-            $artists = $artists->where('artist', $args['artist']);
+            $albums = $albums->artist;
         }
 
-        return $artists->get();
+        return $albums->get();
     }
 }

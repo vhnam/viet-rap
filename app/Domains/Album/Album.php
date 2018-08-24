@@ -15,7 +15,7 @@ class Album extends Model
      * @var string
      */
 	protected $table = 'albums';
-	
+
 	/**
      * The attributes that are mass assignable.
      *
@@ -28,10 +28,10 @@ class Album extends Model
 	 *
 	 * @return Illuminate\Database\Eloquent\Relations\BelongsTo
 	 */
-	public function artists() {
+	public function artist() {
 		return $this->belongsTo(Artist::class);
     }
-    
+
     /**
 	 * One to Many relation
 	 *
