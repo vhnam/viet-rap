@@ -10,17 +10,6 @@ use App\Domains\Artist\Repository\ArtistRepository;
 class ArtistRepositoryTest extends TestCase
 {
     /**
-     * Setup
-     * 
-     * @param array $data
-     * @return Artist
-     */
-    private function createArtist($data) {
-        $artistRepository = new ArtistRepository(new Artist);
-        return $artistRepository->createArtist($data);
-    }
-
-    /**
      * It is instance of ArtistRepository
      * 
      * @return void
@@ -46,7 +35,9 @@ class ArtistRepositoryTest extends TestCase
             'artistImage' => 'https://example.com/artists/nah.jpg',
         ];
 
-        $artist = $this->createArtist($data);
+        $artistRepository = new ArtistRepository(new Artist);
+        $artist = $artistRepository->createArtist($data);
+
         $this->assertInstanceOf(Artist::class, $artist);
         $this->assertEquals($data['name'], $artist->name);
         $this->assertEquals($data['profile'], $artist->profile);
@@ -61,15 +52,8 @@ class ArtistRepositoryTest extends TestCase
      * @return void
      */
     public function testFindArtistById() {
-        $data = [
-            'name' => 'Nah',
-            'profile' => 'Tên thật là Nguyễn Vũ Sơn',
-            'alias' => 'nah',
-            'coverImage' => 'https://example.com/artists/nah-cover.jpg',
-            'artistImage' => 'https://example.com/artists/nah.jpg',
-        ];
+        $artist = factory(Artist::class)->create();
 
-        $artist = $this->createArtist($data);
         $artistRepository = new ArtistRepository(new Artist);
         $foundedArtist = $artistRepository->findArtistById($artist->id);
 
@@ -81,29 +65,37 @@ class ArtistRepositoryTest extends TestCase
         $this->assertEquals($artist->artistImage, $foundedArtist->artistImage);
     }
 
-    // /**
-    //  * Update profile of artist
-    //  * 
-    //  * @return void
-    //  */
-    // public function testUpdateArtist() {
-    //     $data = [
-    //         'name' => 'Nah',
-    //         'profile' => 'Tên thật là Nguyễn Vũ Sơn',
-    //         'alias' => 'nah',
-    //         'coverImage' => 'https://example.com/artists/nah-cover.jpg',
-    //         'artistImage' => 'https://example.com/artists/nah.jpg',
-    //     ];
+    /**
+     * Update profile of artist
+     * 
+     * @return void
+     */
+    public function testUpdateArtist() {
+        $artist = factory(Artist::class)->create();
 
-    //     $artist = $this->createArtist($data);
+        $data = [
+            'name' => 'Secret Signal'
+        ];
 
-    //     $data['profile'] = 'Tên thật là Nguyễn Vũ Sơn (aka Deadnah, Nah Chó Điên, Nah Đầu Bếp), sinh ngày 28/12/1991';
+        $artistRepository = new ArtistRepository($artist);
+        $updated = $artistRepository->updateArtist($data);
+        $foundedArtist = $artistRepository->findArtistById($artist->id);
 
-    //     $artistRepository = new ArtistRepository(new Artist);
-    //     $updated = $artistRepository->updateArtist($data);
-    //     $foundedArtist = $artistRepository->findArtistById($artist->id);
+        $this->assertTrue($updated);
+        $this->assertEquals($data['name'], $foundedArtist->name);
+    }
 
-    //     $this->assertEquals(true, $updated);
-    //     $this->assertEquals($data['profile'], $foundedArtist->profile);
-    // }
+    /**
+     * Delete an artist
+     * 
+     * @return void
+     */
+    public function testDeleteArtist() {
+        $artist = factory(Artist::class)->create();
+
+        $artistRepository = new ArtistRepository($artist);
+        $deleted = $artistRepository->deleteArtist();
+
+        $this->assertTrue($deleted);
+    }
 }

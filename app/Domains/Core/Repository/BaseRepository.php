@@ -3,6 +3,7 @@
 namespace App\Domains\Core\Repository;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class BaseRepository implements BaseRepositoryInterface
 {
@@ -11,7 +12,7 @@ class BaseRepository implements BaseRepositoryInterface
     /**
      * BaseRepository Constructor
      * 
-     * @param Illuminate\Database\Eloquent\Model $model
+     * @param Model $model
      */
     public function __construct(Model $model) {
         $this->model = $model;
@@ -26,11 +27,11 @@ class BaseRepository implements BaseRepositoryInterface
     }
 
     /**
-     * @param array $attributes
+     * @param array $data
      * @return boolean
      */
-    public function update(array $attributes): bool {
-        return $this->model->update($attributes);
+    public function update(array $data): bool {
+        return $this->model->update($data);
     }
 
     public function all($columns = array('*'), string $orderBy = 'id', string $sortBy = 'asc') {
@@ -41,6 +42,11 @@ class BaseRepository implements BaseRepositoryInterface
         // TODO
     }
 
+    /**
+     * @param  $id
+     * @return mixed
+     * @throws ModelNotFoundException
+     */
     public function findOneOrFail($id) {
         return $this->model->findOrFail($id);
     }

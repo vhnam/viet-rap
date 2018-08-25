@@ -15,7 +15,5 @@ interface ArtistRepositoryInterface extends BaseRepositoryInterface
 
     public function updateArtist(array $data): bool;
 
-    public function deleteArtist(int $id): bool;
-
-    public function saveArtist(Artist $artist);
+    public function deleteArtist(): bool;
 }

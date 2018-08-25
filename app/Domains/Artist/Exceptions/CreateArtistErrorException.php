@@ -2,7 +2,7 @@
 
 namespace App\Domains\Artist\Exceptions;
 
-class UpdateArtistErrorException extends \Exception
+class CreateArtistErrorException extends \Exception
 {
     //
 }

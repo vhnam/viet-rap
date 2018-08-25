@@ -3,6 +3,7 @@
 namespace App\Domains\Artist\Repository;
 
 use App\Domains\Artist\Artist;
+use App\Domains\Artist\Exceptions\UpdateArtistErrorException;
 use App\Domains\Core\Repository\BaseRepository;
 
 class ArtistRepository extends BaseRepository implements ArtistRepositoryInterface
@@ -21,9 +22,14 @@ class ArtistRepository extends BaseRepository implements ArtistRepositoryInterfa
      * 
      * @param array $data
      * @return Artist
+     * @throws CreateArtistErrorException
      */
     public function createArtist(array $data): Artist {
-        return $this->create($data);
+        try {
+            return $this->create($data);
+        } catch (QueryException $exception) {
+            throw new CreateArtistErrorException($exception);
+        }
     }
 
     /**
@@ -31,24 +37,42 @@ class ArtistRepository extends BaseRepository implements ArtistRepositoryInterfa
      * 
      * @param integer $id
      * @return Artist
+     * @throws ArtistNotFoundErrorException
      */
     public function findArtistById(int $id): Artist {
-        return $this->findOneOrFail($id);
+        try {
+            return $this->findOneOrFail($id);
+        } catch (QueryException $exception) {
+            throw new ArtistNotFoundErrorException($exception);
+        }
     }
 
+    /**
+     * @param array $data
+     * @param int $id
+     *
+     * @return bool
+     * @throws UpdateArtistErrorException
+     */
     public function updateArtist(array $data): bool {
-        // try {
-        //     return $this->update($data);
-        // } catch (QueryException $exception) {
-        //     throw new UpdateArtistErrorException($exception);
-        // }
+        try {
+            return $this->update($data);
+        } catch (QueryException $exception) {
+            throw new UpdateArtistErrorException($exception);
+        }
     }
 
-    public function deleteArtist(int $id): bool {
-        return true;
-    }
-
-    public function saveArtist(Artist $artist) {
-        // TODO
+    /**
+     * Delete an artist by ID
+     * 
+     * @return boolean
+     * @throws DeleteArtistErrorException
+     */
+    public function deleteArtist(): bool {
+        try {
+            return $this->delete();
+        } catch (QueryException $exception) {
+            throw new DeleteArtistErrorException($exception);
+        }
     }
 }
