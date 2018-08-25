@@ -3,6 +3,7 @@
 namespace Tests\Unit\Domains\Artist;
 
 use Tests\TestCase;
+use Illuminate\Support\Collection;
 
 use App\Domains\Artist\Artist;
 use App\Domains\Artist\Repository\ArtistRepository;
@@ -63,6 +64,21 @@ class ArtistRepositoryTest extends TestCase
         $this->assertEquals($artist->alias, $foundedArtist->alias);
         $this->assertEquals($artist->coverImage, $foundedArtist->coverImage);
         $this->assertEquals($artist->artistImage, $foundedArtist->artistImage);
+    }
+
+    /**
+     * Get all artists
+     * 
+     * @return void
+     */
+    public function testShowAllArtists() {
+        factory(Artist::class, 5)->create();
+
+        $artistRepository = new ArtistRepository(new Artist);
+        $list = $artistRepository->listArtists();
+
+        $this->assertInstanceOf(Collection::class, $list);
+        $this->assertCount(5, $list->all());
     }
 
     /**

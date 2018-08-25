@@ -2,6 +2,8 @@
 
 namespace App\Domains\Artist\Repository;
 
+use Illuminate\Support\Collection;
+
 use App\Domains\Artist\Artist;
 use App\Domains\Artist\Exceptions\UpdateArtistErrorException;
 use App\Domains\Core\Repository\BaseRepository;
@@ -45,6 +47,17 @@ class ArtistRepository extends BaseRepository implements ArtistRepositoryInterfa
         } catch (QueryException $exception) {
             throw new ArtistNotFoundErrorException($exception);
         }
+    }
+
+    /**
+     * @param array $columns
+     * @param string $orderBy
+     * @param string $sortBy
+     *
+     * @return Collection
+     */
+    public function listArtists($columns = array('*'), string $orderBy = 'id', string $sortBy = 'asc') : Collection {
+        return $this->all($columns, $orderBy, $sortBy);
     }
 
     /**

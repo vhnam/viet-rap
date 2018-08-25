@@ -13,6 +13,8 @@ interface ArtistRepositoryInterface extends BaseRepositoryInterface
 
     public function findArtistById(int $id): Artist;
 
+    public function listArtists(): Collection;
+
     public function updateArtist(array $data): bool;
 
     public function deleteArtist(): bool;

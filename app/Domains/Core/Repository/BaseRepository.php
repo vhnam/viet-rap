@@ -28,18 +28,36 @@ class BaseRepository implements BaseRepositoryInterface
 
     /**
      * @param array $data
-     * @return boolean
+     * @return bool
      */
     public function update(array $data): bool {
         return $this->model->update($data);
     }
 
+    /**
+     * @param array $columns
+     * @param string $orderBy
+     * @param string $sortBy
+     * @return mixed
+     */
     public function all($columns = array('*'), string $orderBy = 'id', string $sortBy = 'asc') {
-        // TODO
+        return $this->model->orderBy($orderBy, $sortBy)->get($columns);
     }
 
+    /**
+     * @param string $id
+     * @return mixed
+     */
     public function find($id) {
-        // TODO
+        return $this->model->find($id);
+    }
+
+    /**
+     * @param array $data
+     * @return Collection
+     */
+    public function findBy(array $data) {
+        return $this->model->where($data)->get();
     }
 
     /**
@@ -51,17 +69,28 @@ class BaseRepository implements BaseRepositoryInterface
         return $this->model->findOrFail($id);
     }
 
-    public function findBy(array $data) {
-        // TODO
-    }
-
+    /**
+     * @param array $data
+     * @return mixed
+     */
     public function findOneBy(array $data) {
-        // TODO
+        return $this->model->where($data)->first();
     }
 
-    public function delete(): bool {
-        // TODO
+    /**
+     * @param array $data
+     * @return mixed
+     * @throws ModelNotFoundException
+     */
+    public function findOneByOrFail(array $data) {
+        return $this->model->where($data)->firstOrFail();
+    }
 
-        return true;
+    /**
+     * @return bool
+     * @throws \Exception
+     */
+    public function delete(): bool {
+        return $this->model->delete();
     }
 }

@@ -12,11 +12,11 @@ interface BaseRepositoryInterface
 
     public function find($id);
 
-    public function findOneOrFail($id);
-
     public function findBy(array $data);
 
     public function findOneBy(array $data);
+
+    public function findOneOrFail($id);
 
     public function delete(): bool;
 }
