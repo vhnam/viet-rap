@@ -15,9 +15,6 @@ describe('Footer Component', function () {
     }
 
     beforeEach(() => {
-        props = {
-            page: undefined,
-        };
         mountedFooterComponent = undefined;
     });
 
