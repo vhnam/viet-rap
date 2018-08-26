@@ -20,3 +20,5 @@ _Note:_ This project do not relative with VietRap2018 of Nah
 - Laravel GraphQL - [https://github.com/Folkloreatelier/laravel-graphql#schemas](https://github.com/Folkloreatelier/laravel-graphql#schemas)
 - Pusher - [https://blog.pusher.com/building-apis-laravel-graphql/](https://blog.pusher.com/building-apis-laravel-graphql/)
 - Maurizio Bonani - [http://blog.mauriziobonani.com/first-steps-with-graphql-in-laravel-framework---part-one/](http://blog.mauriziobonani.com/first-steps-with-graphql-in-laravel-framework---part-one/)
+- TechMaster - [https://techmaster.vn/posts/34222/toi-da-test-cac-react-component-nhu-the-nao](https://techmaster.vn/posts/34222/toi-da-test-cac-react-component-nhu-the-nao)
+- TechMaster - [https://techmaster.vn/posts/34250/toi-da-test-cac-react-component-nhu-the-nao-phan-2](https://techmaster.vn/posts/34250/toi-da-test-cac-react-component-nhu-the-nao-phan-2)
