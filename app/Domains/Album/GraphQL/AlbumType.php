@@ -21,6 +21,9 @@ class AlbumType extends GraphQLType
             'name' => [
                 'type' => Type::nonNull(Type::string())
             ],
+            'alias' => [
+                'type' => Type::nonNull(Type::string())
+            ],
             'coverImage' => [
                 'type' => Type::nonNull(Type::string())
             ],

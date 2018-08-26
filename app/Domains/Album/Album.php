@@ -21,7 +21,7 @@ class Album extends Model
      *
      * @var array
      */
-    protected $fillable = ['name', 'coverImage', 'artist'];
+    protected $fillable = ['name', 'alias', 'coverImage', 'artist_id'];
 
     /**
 	 * One to Many relation
