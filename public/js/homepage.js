@@ -19903,70 +19903,70 @@ var Header = function (_Component) {
     }
 
     _createClass(Header, [{
-        key: "componentDidMount",
-        value: function componentDidMount() {
-            // let navLink = document.getElementById(this.props.page);
-            // navLink.classList.add('nav-link--active');
+        key: 'setActivedNavItem',
+        value: function setActivedNavItem(navItemID) {
+            if (navItemID === this.props.page) return 'nav-link nav-link--active';
+            return 'nav-link';
         }
     }, {
-        key: "render",
+        key: 'render',
         value: function render() {
             return _react2.default.createElement(
-                "nav",
-                { className: "navbar navbar-expand-lg navbar-light" },
+                'nav',
+                { className: 'navbar navbar-expand-lg navbar-light' },
                 _react2.default.createElement(
-                    "div",
-                    { className: "container" },
+                    'div',
+                    { className: 'container' },
                     _react2.default.createElement(
-                        "a",
-                        { className: "navbar-brand", href: "#" },
-                        "VietRap2018"
+                        'a',
+                        { className: 'navbar-brand', href: '#' },
+                        'RapViet2018'
                     ),
                     _react2.default.createElement(
-                        "button",
-                        { className: "navbar-toggler", type: "button", "data-toggle": "collapse", "data-target": "#navbarSupportedContent", "aria-controls": "navbarSupportedContent", "aria-expanded": "false", "aria-label": "Toggle navigation" },
-                        _react2.default.createElement("span", { className: "navbar-toggler-icon" })
+                        'button',
+                        { className: 'navbar-toggler', type: 'button', 'data-toggle': 'collapse', 'data-target': '#navbarSupportedContent', 'aria-controls': 'navbarSupportedContent', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' },
+                        _react2.default.createElement('span', { className: 'navbar-toggler-icon' })
                     ),
                     _react2.default.createElement(
-                        "div",
-                        { className: "collapse navbar-collapse", id: "navbarSupportedContent" },
+                        'div',
+                        { className: 'collapse navbar-collapse', id: 'navbarSupportedContent' },
                         _react2.default.createElement(
-                            "ul",
-                            { className: "navbar-nav ml-auto" },
+                            'ul',
+                            { className: 'navbar-nav ml-auto' },
                             _react2.default.createElement(
-                                "li",
-                                { className: "nav-item" },
+                                'li',
+                                { className: 'nav-item' },
                                 _react2.default.createElement(
-                                    "a",
-                                    { className: "nav-link", href: "#", id: "page-homepage" },
-                                    "Home"
+                                    'a',
+                                    { className: this.setActivedNavItem('page-homepage'), href: '#', id: 'page-homepage' },
+                                    'Home'
                                 )
                             ),
                             _react2.default.createElement(
-                                "li",
-                                { className: "nav-item" },
+                                'li',
+                                { className: 'nav-item' },
                                 _react2.default.createElement(
-                                    "a",
-                                    { className: "nav-link", href: "#", id: "page-songs" },
-                                    "Songs"
+                                    'a',
+                                    { className: this.setActivedNavItem('page-songs'), href: '#', id: 'page-songs' },
+                                    'Songs'
                                 )
                             ),
                             _react2.default.createElement(
-                                "li",
-                                { className: "nav-item" },
+                                'li',
+                                { className: 'nav-item' },
                                 _react2.default.createElement(
-                                    "a",
-                                    { className: "nav-link", href: "#", id: "page-artists" },
-                                    "Artists"
+                                    'a',
+                                    { className: this.setActivedNavItem('page-artists'), href: '#', id: 'page-artists' },
+                                    'Artists'
                                 )
                             ),
                             _react2.default.createElement(
-                                "li",
-                                { className: "nav-item" },
+                                'li',
+                                { className: 'nav-item' },
                                 _react2.default.createElement(
-                                    "a",
-                                    { className: "nav-link", href: "#", id: "page-about" },
-                                    "About"
+                                    'a',
+                                    { className: this.setActivedNavItem('page-about'), href: '#', id: 'page-about' },
+                                    'About'
                                 )
                             )
                         )
