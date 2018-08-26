@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 63);
+/******/ 	return __webpack_require__(__webpack_require__.s = 64);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -73,7 +73,7 @@
 if (false) {
   module.exports = require('./cjs/react.production.min.js');
 } else {
-  module.exports = __webpack_require__(9);
+  module.exports = __webpack_require__(10);
 }
 
 
@@ -384,7 +384,7 @@ module.exports = warning;
 var printWarning = function() {};
 
 if (true) {
-  var ReactPropTypesSecret = __webpack_require__(10);
+  var ReactPropTypesSecret = __webpack_require__(11);
   var loggedTypeFailures = {};
 
   printWarning = function(text) {
@@ -466,8 +466,53 @@ module.exports = checkPropTypes;
 
 
 /***/ }),
-/* 8 */,
-/* 9 */
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function checkDCE() {
+  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+  if (
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
+  ) {
+    return;
+  }
+  if (true) {
+    // This branch is unreachable because this function is only called
+    // in production, but the condition is true only in development.
+    // Therefore if the branch is still here, dead code elimination wasn't
+    // properly applied.
+    // Don't change the message. React DevTools relies on it. Also make sure
+    // this message doesn't occur elsewhere in this function, or it will cause
+    // a false positive.
+    throw new Error('^_^');
+  }
+  try {
+    // Verify that the code above has been dead code eliminated (DCE'd).
+    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
+  } catch (err) {
+    // DevTools shouldn't crash React, no matter what.
+    // We should still report in case we break this code.
+    console.error(err);
+  }
+}
+
+if (false) {
+  // DCE check should happen before ReactDOM bundle executes so that
+  // DevTools can report bad minification during injection.
+  checkDCE();
+  module.exports = require('./cjs/react-dom.production.min.js');
+} else {
+  module.exports = __webpack_require__(12);
+}
+
+
+/***/ }),
+/* 9 */,
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1960,7 +2005,7 @@ module.exports = react;
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1976,51 +2021,6 @@ module.exports = react;
 var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
-
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function checkDCE() {
-  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
-  if (
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
-  ) {
-    return;
-  }
-  if (true) {
-    // This branch is unreachable because this function is only called
-    // in production, but the condition is true only in development.
-    // Therefore if the branch is still here, dead code elimination wasn't
-    // properly applied.
-    // Don't change the message. React DevTools relies on it. Also make sure
-    // this message doesn't occur elsewhere in this function, or it will cause
-    // a false positive.
-    throw new Error('^_^');
-  }
-  try {
-    // Verify that the code above has been dead code eliminated (DCE'd).
-    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
-  } catch (err) {
-    // DevTools shouldn't crash React, no matter what.
-    // We should still report in case we break this code.
-    console.error(err);
-  }
-}
-
-if (false) {
-  // DCE check should happen before ReactDOM bundle executes so that
-  // DevTools can report bad minification during injection.
-  checkDCE();
-  module.exports = require('./cjs/react-dom.production.min.js');
-} else {
-  module.exports = __webpack_require__(12);
-}
 
 
 /***/ }),
@@ -19982,105 +19982,7 @@ var Header = function (_Component) {
 exports.default = Header;
 
 /***/ }),
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */,
-/* 35 */,
-/* 36 */,
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */,
-/* 60 */,
-/* 61 */,
-/* 62 */,
-/* 63 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(64);
-
-
-/***/ }),
-/* 64 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(11);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _Header = __webpack_require__(23);
-
-var _Header2 = _interopRequireDefault(_Header);
-
-var _Footer = __webpack_require__(79);
-
-var _Footer2 = _interopRequireDefault(_Footer);
-
-var _TopArtistsList = __webpack_require__(81);
-
-var _TopArtistsList2 = _interopRequireDefault(_TopArtistsList);
-
-var _TopSongsList = __webpack_require__(83);
-
-var _TopSongsList2 = _interopRequireDefault(_TopSongsList);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-_reactDom2.default.render(_react2.default.createElement(_Header2.default, { page: 'page-homepage' }), document.getElementById('header'));
-_reactDom2.default.render(_react2.default.createElement(_Footer2.default, null), document.getElementById('footer'));
-_reactDom2.default.render(_react2.default.createElement(_TopArtistsList2.default, null), document.getElementById('top-artists'));
-_reactDom2.default.render(_react2.default.createElement(_TopSongsList2.default, null), document.getElementById('top-songs'));
-
-/***/ }),
-/* 65 */,
-/* 66 */,
-/* 67 */,
-/* 68 */,
-/* 69 */,
-/* 70 */,
-/* 71 */,
-/* 72 */,
-/* 73 */,
-/* 74 */,
-/* 75 */,
-/* 76 */,
-/* 77 */,
-/* 78 */,
-/* 79 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20096,7 +19998,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(11);
+var _reactDom = __webpack_require__(8);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -20139,7 +20041,100 @@ var Footer = function (_Component) {
 exports.default = Footer;
 
 /***/ }),
-/* 80 */
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var TopSongsListItem = function (_Component) {
+    _inherits(TopSongsListItem, _Component);
+
+    function TopSongsListItem() {
+        _classCallCheck(this, TopSongsListItem);
+
+        return _possibleConstructorReturn(this, (TopSongsListItem.__proto__ || Object.getPrototypeOf(TopSongsListItem)).apply(this, arguments));
+    }
+
+    _createClass(TopSongsListItem, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "li",
+                { className: "item" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "row" },
+                    _react2.default.createElement(
+                        "div",
+                        { className: "col-3 col-sm-1" },
+                        _react2.default.createElement(
+                            "span",
+                            { className: "item__index" },
+                            this.props.index
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "col-6 col-sm-9" },
+                        _react2.default.createElement(
+                            "span",
+                            { className: "item__title" },
+                            this.props.title
+                        ),
+                        _react2.default.createElement(
+                            "span",
+                            { className: "item__artist" },
+                            this.props.artist
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        { className: "col-3 col-sm-2" },
+                        _react2.default.createElement(
+                            "span",
+                            { className: "item__views" },
+                            this.props.views
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return TopSongsListItem;
+}(_react.Component);
+
+exports.default = TopSongsListItem;
+
+/***/ }),
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20227,7 +20222,81 @@ var List = function (_Component) {
 exports.default = List;
 
 /***/ }),
-/* 81 */
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(65);
+
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(8);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _Header = __webpack_require__(23);
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _Footer = __webpack_require__(24);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+var _TopArtistsList = __webpack_require__(66);
+
+var _TopArtistsList2 = _interopRequireDefault(_TopArtistsList);
+
+var _TopSongsList = __webpack_require__(68);
+
+var _TopSongsList2 = _interopRequireDefault(_TopSongsList);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_reactDom2.default.render(_react2.default.createElement(_Header2.default, { page: 'page-homepage' }), document.getElementById('header'));
+_reactDom2.default.render(_react2.default.createElement(_Footer2.default, null), document.getElementById('footer'));
+_reactDom2.default.render(_react2.default.createElement(_TopArtistsList2.default, null), document.getElementById('top-artists'));
+_reactDom2.default.render(_react2.default.createElement(_TopSongsList2.default, null), document.getElementById('top-songs'));
+
+/***/ }),
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20243,11 +20312,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _List = __webpack_require__(80);
+var _List = __webpack_require__(34);
 
 var _List2 = _interopRequireDefault(_List);
 
-var _TopArtistsListItem = __webpack_require__(82);
+var _TopArtistsListItem = __webpack_require__(67);
 
 var _TopArtistsListItem2 = _interopRequireDefault(_TopArtistsListItem);
 
@@ -20287,7 +20356,7 @@ var TopArtistsList = function (_Component) {
 exports.default = TopArtistsList;
 
 /***/ }),
-/* 82 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20342,7 +20411,7 @@ var TopArtistsListItem = function (_Component) {
 exports.default = TopArtistsListItem;
 
 /***/ }),
-/* 83 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20358,11 +20427,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _List = __webpack_require__(80);
+var _List = __webpack_require__(34);
 
 var _List2 = _interopRequireDefault(_List);
 
-var _TopSongsListItem = __webpack_require__(84);
+var _TopSongsListItem = __webpack_require__(25);
 
 var _TopSongsListItem2 = _interopRequireDefault(_TopSongsListItem);
 
@@ -20407,91 +20476,6 @@ var TopSongsList = function (_Component) {
 }(_react.Component);
 
 exports.default = TopSongsList;
-
-/***/ }),
-/* 84 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var TopSongsListItem = function (_Component) {
-    _inherits(TopSongsListItem, _Component);
-
-    function TopSongsListItem() {
-        _classCallCheck(this, TopSongsListItem);
-
-        return _possibleConstructorReturn(this, (TopSongsListItem.__proto__ || Object.getPrototypeOf(TopSongsListItem)).apply(this, arguments));
-    }
-
-    _createClass(TopSongsListItem, [{
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement(
-                "li",
-                { className: "item" },
-                _react2.default.createElement(
-                    "div",
-                    { className: "row" },
-                    _react2.default.createElement(
-                        "div",
-                        { className: "col-3 col-sm-1" },
-                        _react2.default.createElement(
-                            "span",
-                            { className: "item__index" },
-                            this.props.index
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "col-6 col-sm-9" },
-                        _react2.default.createElement(
-                            "span",
-                            { className: "item__title" },
-                            this.props.title
-                        ),
-                        _react2.default.createElement(
-                            "span",
-                            { className: "item__artist" },
-                            this.props.artist
-                        )
-                    ),
-                    _react2.default.createElement(
-                        "div",
-                        { className: "col-3 col-sm-2" },
-                        _react2.default.createElement(
-                            "span",
-                            { className: "item__views" },
-                            this.props.views
-                        )
-                    )
-                )
-            );
-        }
-    }]);
-
-    return TopSongsListItem;
-}(_react.Component);
-
-exports.default = TopSongsListItem;
 
 /***/ })
 /******/ ]);
