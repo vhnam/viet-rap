@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import Footer from './Footer';
 
-describe('Header Component', function () {
+describe('Footer Component', function () {
     let props;
     let mountedFooterComponent;
     const footerComponent = () => {
