@@ -10,11 +10,9 @@
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('css/components.css') }}">
-    
     @yield('stylesheets')
 </head>
 <body>
-    @yield('page')
     <div id="header"></div>
 
     @yield('content')
@@ -22,8 +20,6 @@
     <div id="footer"></div>
 
     <script src="{{ asset('js/bootstrap.js') }}"></script>
-    <script src="{{ asset('js/components.js') }}"></script>
-
     @yield('scripts')
 </body>
 </html>

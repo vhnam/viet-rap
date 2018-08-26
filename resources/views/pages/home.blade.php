@@ -1,9 +1,5 @@
 @extends('layout.app')
 
-@section('page')
-    <div hidden id="page">page-homepage</div>
-@endsection
-
 @section('stylesheets')
     <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
 @endsection

@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
 export default class Header extends Component {
     componentDidMount() {
-        let pageID = document.getElementById('page').innerText;
-        let navLink = document.getElementById(pageID);
+        let navLink = document.getElementById(this.props.page);
         navLink.classList.add('nav-link--active');
     }
 
@@ -12,7 +10,7 @@ export default class Header extends Component {
         return (
             <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container">
-                    <a className="navbar-brand" href="#">{ Vars.APP_NAME }</a>
+                    <a className="navbar-brand" href="#">{process.env.MIX_APP_NAME}</a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -37,8 +35,4 @@ export default class Header extends Component {
             </nav>
         );
     }
-}
-
-if (document.getElementById('header')) {
-    ReactDOM.render(<Header />, document.getElementById('header'));
 }

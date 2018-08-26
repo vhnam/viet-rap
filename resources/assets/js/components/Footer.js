@@ -6,13 +6,9 @@ export default class Footer extends Component {
         return (
             <footer className="footer">
                 <div className="container">
-                    &copy; 2018 VietRap2018
+                    &copy; {process.env.MIX_APP_NAME}
                 </div>
             </footer>
         )
     }
-}
-
-if (document.getElementById('footer')) {
-    ReactDOM.render(<Footer />, document.getElementById('footer'));
 }
