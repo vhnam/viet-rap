@@ -9,7 +9,8 @@ use Folklore\GraphQL\Support\Type as GraphQLType;
 class SongType extends GraphQLType
 {
     protected $attributes = [
-        'name' => 'Song'
+        'name' => 'Song',
+        'description' => 'A song'
     ];
 
     public function fields() {

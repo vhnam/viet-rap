@@ -36,10 +36,6 @@ class ArtistQuery extends Query
             $artists = $artists->where('name', 'like', "%{$args['name']}%");
         }
 
-        if (isset($args['albums'])) {
-            $artists = $artists->where('id', $args['id']);
-        }
-
         return $artists->get();
     }
 }

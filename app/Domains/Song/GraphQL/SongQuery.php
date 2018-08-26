@@ -26,28 +26,16 @@ class SongQuery extends Query
     }
 
     public function resolve($root, $args, $context, ResolveInfo $info) {
-        // $songs = Song::query();
-
-        // if (isset($args['id'])) {
-        //     $songs = $songs->where('id', $args['id']);
-        // }
-
-        // if (isset($args['name'])) {
-        //     $songs = $songs->where('name', 'like', "%{$args['name']}%");
-        // }
-
-        // return $songs->get();
-
-        $fields = $info->getFieldSelection();
-
         $songs = Song::query();
 
-        foreach ($fields as $field => $keys) {
-            if ($field === 'artists') {
-                $songs->with('artists');
-            }
+        if (isset($args['id'])) {
+            $songs = $songs->where('id', $args['id']);
         }
 
-        return $songs->latest()->get();
+        if (isset($args['name'])) {
+            $songs = $songs->where('name', 'like', "%{$args['name']}%");
+        }
+
+        return $songs->get();
     }
 }

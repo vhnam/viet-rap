@@ -5,6 +5,9 @@ namespace App\Domains\Artist\Repository;
 use Illuminate\Support\Collection;
 
 use App\Domains\Artist\Artist;
+use App\Domains\Artist\Exceptions\CreateArtistErrorException;
+use App\Domains\Artist\Exceptions\ArtistNotFoundErrorException;
+use App\Domains\Artist\Exceptions\DeleteArtistErrorException;
 use App\Domains\Artist\Exceptions\UpdateArtistErrorException;
 use App\Domains\Core\Repository\BaseRepository;
 
@@ -76,8 +79,6 @@ class ArtistRepository extends BaseRepository implements ArtistRepositoryInterfa
     }
 
     /**
-     * Delete an artist by ID
-     * 
      * @return boolean
      * @throws DeleteArtistErrorException
      */
