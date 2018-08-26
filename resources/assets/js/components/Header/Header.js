@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 export default class Header extends Component {
     componentDidMount() {
-        let navLink = document.getElementById(this.props.page);
-        navLink.classList.add('nav-link--active');
+        // let navLink = document.getElementById(this.props.page);
+        // navLink.classList.add('nav-link--active');
     }
 
     render() {
