@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 64);
+/******/ 	return __webpack_require__(__webpack_require__.s = 63);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -73,7 +73,7 @@
 if (false) {
   module.exports = require('./cjs/react.production.min.js');
 } else {
-  module.exports = __webpack_require__(10);
+  module.exports = __webpack_require__(9);
 }
 
 
@@ -384,7 +384,7 @@ module.exports = warning;
 var printWarning = function() {};
 
 if (true) {
-  var ReactPropTypesSecret = __webpack_require__(11);
+  var ReactPropTypesSecret = __webpack_require__(10);
   var loggedTypeFailures = {};
 
   printWarning = function(text) {
@@ -466,53 +466,8 @@ module.exports = checkPropTypes;
 
 
 /***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function checkDCE() {
-  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
-  if (
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
-  ) {
-    return;
-  }
-  if (true) {
-    // This branch is unreachable because this function is only called
-    // in production, but the condition is true only in development.
-    // Therefore if the branch is still here, dead code elimination wasn't
-    // properly applied.
-    // Don't change the message. React DevTools relies on it. Also make sure
-    // this message doesn't occur elsewhere in this function, or it will cause
-    // a false positive.
-    throw new Error('^_^');
-  }
-  try {
-    // Verify that the code above has been dead code eliminated (DCE'd).
-    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
-  } catch (err) {
-    // DevTools shouldn't crash React, no matter what.
-    // We should still report in case we break this code.
-    console.error(err);
-  }
-}
-
-if (false) {
-  // DCE check should happen before ReactDOM bundle executes so that
-  // DevTools can report bad minification during injection.
-  checkDCE();
-  module.exports = require('./cjs/react-dom.production.min.js');
-} else {
-  module.exports = __webpack_require__(12);
-}
-
-
-/***/ }),
-/* 9 */,
-/* 10 */
+/* 8 */,
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2005,7 +1960,7 @@ module.exports = react;
 
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2021,6 +1976,51 @@ module.exports = react;
 var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
+
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function checkDCE() {
+  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
+  if (
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
+    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
+  ) {
+    return;
+  }
+  if (true) {
+    // This branch is unreachable because this function is only called
+    // in production, but the condition is true only in development.
+    // Therefore if the branch is still here, dead code elimination wasn't
+    // properly applied.
+    // Don't change the message. React DevTools relies on it. Also make sure
+    // this message doesn't occur elsewhere in this function, or it will cause
+    // a false positive.
+    throw new Error('^_^');
+  }
+  try {
+    // Verify that the code above has been dead code eliminated (DCE'd).
+    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
+  } catch (err) {
+    // DevTools shouldn't crash React, no matter what.
+    // We should still report in case we break this code.
+    console.error(err);
+  }
+}
+
+if (false) {
+  // DCE check should happen before ReactDOM bundle executes so that
+  // DevTools can report bad minification during injection.
+  checkDCE();
+  module.exports = require('./cjs/react-dom.production.min.js');
+} else {
+  module.exports = __webpack_require__(12);
+}
 
 
 /***/ }),
@@ -19920,7 +19920,7 @@ var Header = function (_Component) {
                     _react2.default.createElement(
                         'a',
                         { className: 'navbar-brand', href: '#' },
-                        'RapViet2018'
+                        "VietRap2018"
                     ),
                     _react2.default.createElement(
                         'button',
@@ -19982,7 +19982,105 @@ var Header = function (_Component) {
 exports.default = Header;
 
 /***/ }),
-/* 24 */
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(64);
+
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(11);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _Header = __webpack_require__(23);
+
+var _Header2 = _interopRequireDefault(_Header);
+
+var _Footer = __webpack_require__(79);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+var _TopArtistsList = __webpack_require__(81);
+
+var _TopArtistsList2 = _interopRequireDefault(_TopArtistsList);
+
+var _TopSongsList = __webpack_require__(83);
+
+var _TopSongsList2 = _interopRequireDefault(_TopSongsList);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_reactDom2.default.render(_react2.default.createElement(_Header2.default, { page: 'page-homepage' }), document.getElementById('header'));
+_reactDom2.default.render(_react2.default.createElement(_Footer2.default, null), document.getElementById('footer'));
+_reactDom2.default.render(_react2.default.createElement(_TopArtistsList2.default, null), document.getElementById('top-artists'));
+_reactDom2.default.render(_react2.default.createElement(_TopSongsList2.default, null), document.getElementById('top-songs'));
+
+/***/ }),
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19998,7 +20096,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(8);
+var _reactDom = __webpack_require__(11);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -20041,7 +20139,277 @@ var Footer = function (_Component) {
 exports.default = Footer;
 
 /***/ }),
-/* 25 */
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var List = function (_Component) {
+    _inherits(List, _Component);
+
+    function List(props) {
+        _classCallCheck(this, List);
+
+        var _this = _possibleConstructorReturn(this, (List.__proto__ || Object.getPrototypeOf(List)).call(this, props));
+
+        _this.renderList = _this.renderList.bind(_this);
+        return _this;
+    }
+
+    _createClass(List, [{
+        key: "renderList",
+        value: function renderList() {
+            var html = void 0;
+
+            if (this.props.isRow) {
+                html = _react2.default.createElement(
+                    "div",
+                    { className: "row list__content" },
+                    this.props.children
+                );
+            } else {
+                html = _react2.default.createElement(
+                    "ul",
+                    { className: "list__content" },
+                    this.props.children
+                );
+            }
+
+            return html;
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                { className: "list" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "list__title " + (this.props.isLight ? 'list__title--light' : '') },
+                    this.props.title
+                ),
+                this.renderList(),
+                _react2.default.createElement(
+                    "div",
+                    { className: "list__more" },
+                    _react2.default.createElement(
+                        "a",
+                        { className: "list__more-link", href: "#" },
+                        "Show more"
+                    )
+                )
+            );
+        }
+    }]);
+
+    return List;
+}(_react.Component);
+
+exports.default = List;
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _List = __webpack_require__(80);
+
+var _List2 = _interopRequireDefault(_List);
+
+var _TopArtistsListItem = __webpack_require__(82);
+
+var _TopArtistsListItem2 = _interopRequireDefault(_TopArtistsListItem);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var TopArtistsList = function (_Component) {
+    _inherits(TopArtistsList, _Component);
+
+    function TopArtistsList() {
+        _classCallCheck(this, TopArtistsList);
+
+        return _possibleConstructorReturn(this, (TopArtistsList.__proto__ || Object.getPrototypeOf(TopArtistsList)).apply(this, arguments));
+    }
+
+    _createClass(TopArtistsList, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                _List2.default,
+                { title: 'Top artists', isLight: 'true', isRow: 'true' },
+                _react2.default.createElement(_TopArtistsListItem2.default, { name: 'DSK', artistImage: 'https://i.pinimg.com/originals/64/2a/5d/642a5d2be8b93da557d6ab41c90732c8.jpg' }),
+                _react2.default.createElement(_TopArtistsListItem2.default, { name: 'DSK', artistImage: 'https://i.pinimg.com/originals/64/2a/5d/642a5d2be8b93da557d6ab41c90732c8.jpg' }),
+                _react2.default.createElement(_TopArtistsListItem2.default, { name: 'DSK', artistImage: 'https://i.pinimg.com/originals/64/2a/5d/642a5d2be8b93da557d6ab41c90732c8.jpg' })
+            );
+        }
+    }]);
+
+    return TopArtistsList;
+}(_react.Component);
+
+exports.default = TopArtistsList;
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var TopArtistsListItem = function (_Component) {
+    _inherits(TopArtistsListItem, _Component);
+
+    function TopArtistsListItem() {
+        _classCallCheck(this, TopArtistsListItem);
+
+        return _possibleConstructorReturn(this, (TopArtistsListItem.__proto__ || Object.getPrototypeOf(TopArtistsListItem)).apply(this, arguments));
+    }
+
+    _createClass(TopArtistsListItem, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                { className: "item col-md-4" },
+                _react2.default.createElement("img", { className: "item__image", src: this.props.artistImage, alt: "DSK" }),
+                _react2.default.createElement(
+                    "a",
+                    { className: "item__artist", href: "/artists/dsk" },
+                    this.props.name
+                )
+            );
+        }
+    }]);
+
+    return TopArtistsListItem;
+}(_react.Component);
+
+exports.default = TopArtistsListItem;
+
+/***/ }),
+/* 83 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _List = __webpack_require__(80);
+
+var _List2 = _interopRequireDefault(_List);
+
+var _TopSongsListItem = __webpack_require__(84);
+
+var _TopSongsListItem2 = _interopRequireDefault(_TopSongsListItem);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var TopSongsList = function (_Component) {
+    _inherits(TopSongsList, _Component);
+
+    function TopSongsList() {
+        _classCallCheck(this, TopSongsList);
+
+        return _possibleConstructorReturn(this, (TopSongsList.__proto__ || Object.getPrototypeOf(TopSongsList)).apply(this, arguments));
+    }
+
+    _createClass(TopSongsList, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                _List2.default,
+                { title: 'Top songs' },
+                _react2.default.createElement(_TopSongsListItem2.default, { index: '1', title: 'Th\xE1ng 6 c\u1EE7a anh', artist: 'Kh\xF3i ft Two', views: '4.2M' }),
+                _react2.default.createElement(_TopSongsListItem2.default, { index: '1', title: 'Th\xE1ng 6 c\u1EE7a anh', artist: 'Kh\xF3i ft Two', views: '4.2M' }),
+                _react2.default.createElement(_TopSongsListItem2.default, { index: '1', title: 'Th\xE1ng 6 c\u1EE7a anh', artist: 'Kh\xF3i ft Two', views: '4.2M' }),
+                _react2.default.createElement(_TopSongsListItem2.default, { index: '1', title: 'Th\xE1ng 6 c\u1EE7a anh', artist: 'Kh\xF3i ft Two', views: '4.2M' }),
+                _react2.default.createElement(_TopSongsListItem2.default, { index: '1', title: 'Th\xE1ng 6 c\u1EE7a anh', artist: 'Kh\xF3i ft Two', views: '4.2M' }),
+                _react2.default.createElement(_TopSongsListItem2.default, { index: '1', title: 'Th\xE1ng 6 c\u1EE7a anh', artist: 'Kh\xF3i ft Two', views: '4.2M' }),
+                _react2.default.createElement(_TopSongsListItem2.default, { index: '1', title: 'Th\xE1ng 6 c\u1EE7a anh', artist: 'Kh\xF3i ft Two', views: '4.2M' }),
+                _react2.default.createElement(_TopSongsListItem2.default, { index: '1', title: 'Th\xE1ng 6 c\u1EE7a anh', artist: 'Kh\xF3i ft Two', views: '4.2M' }),
+                _react2.default.createElement(_TopSongsListItem2.default, { index: '1', title: 'Th\xE1ng 6 c\u1EE7a anh', artist: 'Kh\xF3i ft Two', views: '4.2M' }),
+                _react2.default.createElement(_TopSongsListItem2.default, { index: '1', title: 'Th\xE1ng 6 c\u1EE7a anh', artist: 'Kh\xF3i ft Two', views: '4.2M' })
+            );
+        }
+    }]);
+
+    return TopSongsList;
+}(_react.Component);
+
+exports.default = TopSongsList;
+
+/***/ }),
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20124,402 +20492,6 @@ var TopSongsListItem = function (_Component) {
 }(_react.Component);
 
 exports.default = TopSongsListItem;
-
-/***/ }),
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var ListUl = function (_Component) {
-    _inherits(ListUl, _Component);
-
-    function ListUl() {
-        _classCallCheck(this, ListUl);
-
-        return _possibleConstructorReturn(this, (ListUl.__proto__ || Object.getPrototypeOf(ListUl)).apply(this, arguments));
-    }
-
-    _createClass(ListUl, [{
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement(
-                "ul",
-                { className: "list__content" },
-                this.props.children
-            );
-        }
-    }]);
-
-    return ListUl;
-}(_react.Component);
-
-var ListDiv = function (_Component2) {
-    _inherits(ListDiv, _Component2);
-
-    function ListDiv() {
-        _classCallCheck(this, ListDiv);
-
-        return _possibleConstructorReturn(this, (ListDiv.__proto__ || Object.getPrototypeOf(ListDiv)).apply(this, arguments));
-    }
-
-    _createClass(ListDiv, [{
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement(
-                "div",
-                { className: "row list__content" },
-                this.props.children
-            );
-        }
-    }]);
-
-    return ListDiv;
-}(_react.Component);
-
-var ListContent = function (_Component3) {
-    _inherits(ListContent, _Component3);
-
-    function ListContent() {
-        _classCallCheck(this, ListContent);
-
-        return _possibleConstructorReturn(this, (ListContent.__proto__ || Object.getPrototypeOf(ListContent)).apply(this, arguments));
-    }
-
-    _createClass(ListContent, [{
-        key: "render",
-        value: function render() {
-            if (this.props.isRow) {
-                return _react2.default.createElement(ListDiv, { children: this.props.children });
-            }
-            return _react2.default.createElement(ListUl, { children: this.props.children });
-        }
-    }]);
-
-    return ListContent;
-}(_react.Component);
-
-var List = function (_Component4) {
-    _inherits(List, _Component4);
-
-    function List(props) {
-        _classCallCheck(this, List);
-
-        return _possibleConstructorReturn(this, (List.__proto__ || Object.getPrototypeOf(List)).call(this, props));
-    }
-
-    _createClass(List, [{
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement(
-                "div",
-                { className: "list" },
-                _react2.default.createElement(
-                    "div",
-                    { className: "list__title " + (this.props.isLight ? 'list__title--light' : '') },
-                    this.props.title
-                ),
-                _react2.default.createElement(ListContent, { isRow: this.props.isRow, children: this.props.children }),
-                _react2.default.createElement(
-                    "div",
-                    { className: "list__more" },
-                    _react2.default.createElement(
-                        "a",
-                        { className: "list__more-link", href: "#" },
-                        "Show more"
-                    )
-                )
-            );
-        }
-    }]);
-
-    return List;
-}(_react.Component);
-
-exports.default = List;
-
-/***/ }),
-/* 35 */,
-/* 36 */,
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */,
-/* 60 */,
-/* 61 */,
-/* 62 */,
-/* 63 */,
-/* 64 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(65);
-
-
-/***/ }),
-/* 65 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(8);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _Header = __webpack_require__(23);
-
-var _Header2 = _interopRequireDefault(_Header);
-
-var _Footer = __webpack_require__(24);
-
-var _Footer2 = _interopRequireDefault(_Footer);
-
-var _TopArtistsList = __webpack_require__(66);
-
-var _TopArtistsList2 = _interopRequireDefault(_TopArtistsList);
-
-var _TopSongsList = __webpack_require__(68);
-
-var _TopSongsList2 = _interopRequireDefault(_TopSongsList);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-_reactDom2.default.render(_react2.default.createElement(_Header2.default, { page: 'page-homepage' }), document.getElementById('header'));
-_reactDom2.default.render(_react2.default.createElement(_Footer2.default, null), document.getElementById('footer'));
-_reactDom2.default.render(_react2.default.createElement(_TopArtistsList2.default, null), document.getElementById('top-artists'));
-_reactDom2.default.render(_react2.default.createElement(_TopSongsList2.default, null), document.getElementById('top-songs'));
-
-/***/ }),
-/* 66 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _List = __webpack_require__(34);
-
-var _List2 = _interopRequireDefault(_List);
-
-var _TopArtistsListItem = __webpack_require__(67);
-
-var _TopArtistsListItem2 = _interopRequireDefault(_TopArtistsListItem);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var TopArtistsList = function (_Component) {
-    _inherits(TopArtistsList, _Component);
-
-    function TopArtistsList() {
-        _classCallCheck(this, TopArtistsList);
-
-        return _possibleConstructorReturn(this, (TopArtistsList.__proto__ || Object.getPrototypeOf(TopArtistsList)).apply(this, arguments));
-    }
-
-    _createClass(TopArtistsList, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                _List2.default,
-                { title: 'Top artists', isLight: 'true', isRow: 'true' },
-                _react2.default.createElement(_TopArtistsListItem2.default, { name: 'DSK', artistImage: 'https://i.pinimg.com/originals/64/2a/5d/642a5d2be8b93da557d6ab41c90732c8.jpg' }),
-                _react2.default.createElement(_TopArtistsListItem2.default, { name: 'DSK', artistImage: 'https://i.pinimg.com/originals/64/2a/5d/642a5d2be8b93da557d6ab41c90732c8.jpg' }),
-                _react2.default.createElement(_TopArtistsListItem2.default, { name: 'DSK', artistImage: 'https://i.pinimg.com/originals/64/2a/5d/642a5d2be8b93da557d6ab41c90732c8.jpg' })
-            );
-        }
-    }]);
-
-    return TopArtistsList;
-}(_react.Component);
-
-exports.default = TopArtistsList;
-
-/***/ }),
-/* 67 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var TopArtistsListItem = function (_Component) {
-    _inherits(TopArtistsListItem, _Component);
-
-    function TopArtistsListItem() {
-        _classCallCheck(this, TopArtistsListItem);
-
-        return _possibleConstructorReturn(this, (TopArtistsListItem.__proto__ || Object.getPrototypeOf(TopArtistsListItem)).apply(this, arguments));
-    }
-
-    _createClass(TopArtistsListItem, [{
-        key: "render",
-        value: function render() {
-            return _react2.default.createElement(
-                "div",
-                { className: "item col-md-4" },
-                _react2.default.createElement("img", { className: "item__image", src: this.props.artistImage, alt: "DSK" }),
-                _react2.default.createElement(
-                    "a",
-                    { className: "item__artist", href: "/artists/dsk" },
-                    this.props.name
-                )
-            );
-        }
-    }]);
-
-    return TopArtistsListItem;
-}(_react.Component);
-
-exports.default = TopArtistsListItem;
-
-/***/ }),
-/* 68 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _List = __webpack_require__(34);
-
-var _List2 = _interopRequireDefault(_List);
-
-var _TopSongsListItem = __webpack_require__(25);
-
-var _TopSongsListItem2 = _interopRequireDefault(_TopSongsListItem);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var TopSongsList = function (_Component) {
-    _inherits(TopSongsList, _Component);
-
-    function TopSongsList() {
-        _classCallCheck(this, TopSongsList);
-
-        return _possibleConstructorReturn(this, (TopSongsList.__proto__ || Object.getPrototypeOf(TopSongsList)).apply(this, arguments));
-    }
-
-    _createClass(TopSongsList, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                _List2.default,
-                { title: 'Top songs' },
-                _react2.default.createElement(_TopSongsListItem2.default, { index: '1', title: 'Th\xE1ng 6 c\u1EE7a anh', artist: 'Kh\xF3i ft Two', views: '4.2M' }),
-                _react2.default.createElement(_TopSongsListItem2.default, { index: '1', title: 'Th\xE1ng 6 c\u1EE7a anh', artist: 'Kh\xF3i ft Two', views: '4.2M' }),
-                _react2.default.createElement(_TopSongsListItem2.default, { index: '1', title: 'Th\xE1ng 6 c\u1EE7a anh', artist: 'Kh\xF3i ft Two', views: '4.2M' }),
-                _react2.default.createElement(_TopSongsListItem2.default, { index: '1', title: 'Th\xE1ng 6 c\u1EE7a anh', artist: 'Kh\xF3i ft Two', views: '4.2M' }),
-                _react2.default.createElement(_TopSongsListItem2.default, { index: '1', title: 'Th\xE1ng 6 c\u1EE7a anh', artist: 'Kh\xF3i ft Two', views: '4.2M' }),
-                _react2.default.createElement(_TopSongsListItem2.default, { index: '1', title: 'Th\xE1ng 6 c\u1EE7a anh', artist: 'Kh\xF3i ft Two', views: '4.2M' }),
-                _react2.default.createElement(_TopSongsListItem2.default, { index: '1', title: 'Th\xE1ng 6 c\u1EE7a anh', artist: 'Kh\xF3i ft Two', views: '4.2M' }),
-                _react2.default.createElement(_TopSongsListItem2.default, { index: '1', title: 'Th\xE1ng 6 c\u1EE7a anh', artist: 'Kh\xF3i ft Two', views: '4.2M' }),
-                _react2.default.createElement(_TopSongsListItem2.default, { index: '1', title: 'Th\xE1ng 6 c\u1EE7a anh', artist: 'Kh\xF3i ft Two', views: '4.2M' }),
-                _react2.default.createElement(_TopSongsListItem2.default, { index: '1', title: 'Th\xE1ng 6 c\u1EE7a anh', artist: 'Kh\xF3i ft Two', views: '4.2M' })
-            );
-        }
-    }]);
-
-    return TopSongsList;
-}(_react.Component);
-
-exports.default = TopSongsList;
 
 /***/ })
 /******/ ]);

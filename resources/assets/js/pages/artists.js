@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import ArtistCover from './../components/ArtistCover';
 import ArtistProfile from './../components/ArtistProfile';
 import Header from '../components/Header/Header';
-import Footer from './../components/Footer';
+import Footer from './../components/Footer/Footer';
 
 ReactDOM.render(<Header page="page-artists" />, document.getElementById('header'));
 ReactDOM.render(<Footer />, document.getElementById('footer'));

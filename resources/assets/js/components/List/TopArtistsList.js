@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import List from './List.js';
+import List from './List';
 import TopArtistsListItem from './TopArtistsListItem';
 
 export default class TopArtistsList extends Component {

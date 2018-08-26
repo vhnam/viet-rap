@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TopSongsListItem from './TopSongsListItem';
+import TopSongsListItem from './List/TopSongsListItem';
 
 export default class ArtistCover extends Component {
     render() {
