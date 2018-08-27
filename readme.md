@@ -22,3 +22,4 @@ _Note:_ This project do not relative with VietRap2018 of Nah
 - Maurizio Bonani - [http://blog.mauriziobonani.com/first-steps-with-graphql-in-laravel-framework---part-one/](http://blog.mauriziobonani.com/first-steps-with-graphql-in-laravel-framework---part-one/)
 - TechMaster - [https://techmaster.vn/posts/34222/toi-da-test-cac-react-component-nhu-the-nao](https://techmaster.vn/posts/34222/toi-da-test-cac-react-component-nhu-the-nao)
 - TechMaster - [https://techmaster.vn/posts/34250/toi-da-test-cac-react-component-nhu-the-nao-phan-2](https://techmaster.vn/posts/34250/toi-da-test-cac-react-component-nhu-the-nao-phan-2)
+- Tightenco - [https://github.com/tightenco/laravel-preset-jest](https://github.com/tightenco/laravel-preset-jest)
