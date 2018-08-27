@@ -59,7 +59,7 @@ class ArtistRepository extends BaseRepository implements ArtistRepositoryInterfa
      *
      * @return Collection
      */
-    public function listArtists($columns = array('*'), string $orderBy = 'id', string $sortBy = 'asc') : Collection {
+    public function listArtists(array $columns = ['*'], string $orderBy = 'id', string $sortBy = 'asc') : Collection {
         return $this->all($columns, $orderBy, $sortBy);
     }
 

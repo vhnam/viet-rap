@@ -11,5 +11,14 @@
 |
 */
 
-Route::get('/', 'PageController@homepage');
-Route::get('/artists/{alias}', 'PageController@artist');
+Route::get('/', function() {
+    return view('pages.home');
+});
+
+Route::get('/artists/{alias}', function() {
+    return view('pages.artist');
+});
+
+Route::get('/artists', function() {
+    return view('pages.artists');
+});

@@ -1,0 +1,68 @@
+.cover {
+  position: relative;
+}
+
+.cover__block {
+  position: absolute;
+  bottom: 2rem;
+  width: 50%;
+}
+
+.cover__background {
+  height: 25rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cover__image {
+  border: .25rem solid #fff;
+}
+
+.cover__block-name {
+  position: relative;
+  height: 100%;
+}
+
+.cover__artist-name {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.profile__title-about,
+.profile__title-songs {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #3B5D5F;
+}
+
+.profile .top-songs {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.profile .top-songs .item__index {
+  width: 2rem;
+}
+
+@media (max-width: 576px) {
+  .cover__block {
+    position: relative;
+    width: 100%;
+    padding-top: 13rem;
+    text-align: center;
+  }
+
+  .cover__image {
+    width: 50%;
+  }
+
+  .cover__artist-name {
+    position: relative;
+    margin-top: 1rem;
+  }
+}
+

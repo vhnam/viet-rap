@@ -15,10 +15,12 @@ mix.copyDirectory('resources/assets/img', 'public/img')
 
     .js('resources/assets/js/bootstrap.js', 'public/js')
     .js('resources/assets/js/pages/homepage.js', 'public/js')
+    .js('resources/assets/js/pages/artist.js', 'public/js')
     .js('resources/assets/js/pages/artists.js', 'public/js')
 
     .sass('resources/assets/sass/bootstrap.scss', 'public/css')
     .sass('resources/assets/sass/components.scss', 'public/css')
     .sass('resources/assets/sass/pages/homepage.scss', 'public/css')
+    .sass('resources/assets/sass/pages/artist.scss', 'public/css')
     .sass('resources/assets/sass/pages/artists.scss', 'public/css')
 ;
