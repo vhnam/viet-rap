@@ -14,6 +14,15 @@ _Note:_ This project do not relative with VietRap2018 of Nah
 - php artisan db:seed
 - php aritsan migrate:refresh --seed
 - ./vendor/bin/phpunit
+-  npm test
+
+## Knowledge
+- Facebook Jest
+- Airbnb Enzyme
+- REST APIs
+    - Transformer: https://viblo.asia/p/fractal-transformers-trong-laravel-that-de-dang-viet-apis-json-dep-hon-E375zeNdlGW
+    - Throttling / Rate Limiting: https://viblo.asia/p/mot-vai-kinh-nghiem-viet-api-924lJM18ZPM
+    - Conditional requests: https://kipalog.com/posts/Facebook-da-toi-uu-browser-de-giam-toi-60--luong-request-nhu-the-nao
 
 ## References
 - Laracom - [https://github.com/Laracommerce/laracom](https://github.com/Laracommerce/laracom)
@@ -23,3 +32,5 @@ _Note:_ This project do not relative with VietRap2018 of Nah
 - TechMaster - [https://techmaster.vn/posts/34222/toi-da-test-cac-react-component-nhu-the-nao](https://techmaster.vn/posts/34222/toi-da-test-cac-react-component-nhu-the-nao)
 - TechMaster - [https://techmaster.vn/posts/34250/toi-da-test-cac-react-component-nhu-the-nao-phan-2](https://techmaster.vn/posts/34250/toi-da-test-cac-react-component-nhu-the-nao-phan-2)
 - Tightenco - [https://github.com/tightenco/laravel-preset-jest](https://github.com/tightenco/laravel-preset-jest)
+- Dingo - [https://github.com/dingo/api/wiki](https://github.com/dingo/api/wiki)
+- Apiato - [http://docs.apiato.io/](http://docs.apiato.io/)
