@@ -5,14 +5,13 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Faker\Generator as Faker;
+use Illuminate\Http\Response;
 
 use App\Domains\Artist\Artist;
 
 class ArtistControllerTest extends TestCase
 {
     /**
-     * Get all
-     *
      * @return void
      */
     public function testIndex() {
@@ -32,8 +31,6 @@ class ArtistControllerTest extends TestCase
     }
 
     /**
-     * Find one by ID
-     *c
      * @return void
      */
     public function testShow() {
@@ -53,8 +50,6 @@ class ArtistControllerTest extends TestCase
     }
 
     /**
-     * Find one by ID
-     *c
      * @return void
      */
     public function testCreate() {
@@ -77,8 +72,6 @@ class ArtistControllerTest extends TestCase
     }
 
     /**
-     * Find one by ID
-     *c
      * @return void
      */
     public function testUpdate() {
@@ -90,11 +83,19 @@ class ArtistControllerTest extends TestCase
 
         $response = $this->json('PUT', '/api/v1/artists/' . $artist->id, $data);
 
-        $response
-            ->assertStatus(204)
-            ->assertJsonStructure([
-                'id',
-                'location'
-            ]);
+        $response->assertStatus(204);
+    }
+    
+    /**
+     * @return void
+     */
+    public function testDelete() {
+        $artist = factory(Artist::class)->create();
+
+        $response = $this->json('GET', '/api/v1/artists/1');
+        $response->assertStatus(200);
+
+        $response = $this->json('DELETE', '/api/v1/artists/' . $artist->id);
+        $response->assertStatus(204);
     }
 }
